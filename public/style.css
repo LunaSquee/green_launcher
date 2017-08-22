@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.window {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #002700;
+    color: #fff;
+}
+.center {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20%;
+    background-color: #001b00;
+    padding: 20px;
+    border-radius: 10px;
+}
+.center span {
+    display: block;
+}
+h1 {
+    margin-top: 0;
+}
+.titlebar {
+    display: table;
+    width: 100%;
+}
+.tab {
+    display: table-cell;
+    font-size: 20px;
+    padding: 20px;
+    background-color: green;
+    text-align: center;
+    cursor: pointer;
+}
+.tab[data-tab="vanilla"] {
+    background-color: #00a00f;
+}
+.tab[data-tab="modpacks"] {
+    background-color: #005cce;
+}
+.tab[data-tab="settings"] {
+    background-color: #4a0069;
+}
+.tab[data-tab="logout"] {
+    background-color: #670000;
+}
+.tab[data-tab="log"] {
+    background-color: #00859a;
+}
+label {
+    display: block;
+}
+.tab_pane {
+    position: absolute;
+    top: 63px;
+    bottom: 0;
+    width: 100%;
+}
+.tab_pane[data-tab="settings"] input[type="text"] {
+    padding: 4px;
+}
+#jvm {
+    width: 80%;
+}
+.dialog-shadow {
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.dialog {
+    min-width: 200px;
+    width: fit-content;
+    margin: auto;
+    min-height: 120px;
+    height: fit-content;
+    margin-top: 10%;
+    background-color: #ddd;
+}
+.dialog .title {
+    padding: 10px;
+    background-color: #a9a9a9;
+}
+.close {
+    float: right;
+    color: #7b0000;
+    cursor: pointer;
+}
+.dialog #content {
+    padding: 10px;
+}
+.instance {
+    width: 200px;
+    min-height: 50px;
+    background-color: #003800;
+    padding: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.instance #name {
+    font-size: 120%;
+    font-weight: bold;
+}
+.instance #version {
+    display: block;
+    font-size: 80%;
+}
+.instance.selected {
+    background-color: #005d09;
+}
+.sidebar {
+    display: inline-block;
+    background-color: rgba(0, 255, 0, 0.2);
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+}
+.sidebar .header {
+    padding: 5px;
+    display: inline-block;
+}
+.sidebar .btnsmall {
+    float: right;
+    padding: 5px;
+}
+.packdata {
+    position: absolute;
+    left: 220px;
+    right: 0;
+    bottom: 0;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.mpdata, .mpdata *, #selectedmp {
+    text-shadow: 1px 2px 3px #000;
+}
+.playbuttons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.rbutton {
+    display: inline-block;
+    background-color: #005cce;
+    padding: 10px;
+    border-radius: 100px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.rbutton:hover {
+    background-color: #0068e8;
+}
+.rbutton.disabled {
+    background-color: #00326f;
+}
+#selectedver {
+    margin-top: 0;
+}
+.btnsmall {
+    cursor: pointer;
+}
+.aligned {
+    padding: 20px;
+}
+.loginbox {
+    width: 450px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: auto;
+    padding: 20px;
+    margin-top: 10%;
+}
+.loginbox input {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.loginbox input:not([type="submit"]) {
+    font-size: 20px;
+    padding: 6px;
+    background-color: #232323;
+    border: 1px solid #000;
+    border-radius: 5px;
+    color: #fff;
+}
+input[type="submit"], .button {
+    background-color: green;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 120%;
+    cursor: pointer;
+}
+input[type="submit"]:hover, .button:hover {
+    background-color: #009a00;
+}
+.progress {
+    width: 100%;
+    background-color: #d2d2d2;
+    height: 20px;
+}
+.progress-bar {
+    background-color: #00a00f;
+    height: 20px;
+}
+.instance.curse {
+    background-color: rgba(195, 99, 0, 0.5);
+}
+.instance.curse.selected {
+    background-color: rgba(255, 129, 0, 0.5);
+}
+.tab.active {
+    border-bottom: 5px solid #00dae4;
+    padding-bottom: 0;
+}
+p#skipped {
+    color: #7b0000;
+    font-weight: bold;
+}
+div#log {
+    background-color: #c1c1c1;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 60px;
+    border: 1px solid #ddd;
+    font-family: monospace;
+    overflow: auto;
+    color: black;
+    padding: 5px;
+    white-space: pre;
+    word-wrap: break-word;
+}
+.logbuttons {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+}
+.logmsg.stderr {
+    color: #b50000;
+}
+.modnet {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+}
+.bright, .bleft {
+    text-align: center;
+    width: 250px;
+}
+.bleft {
+    float: left;
+}
+.bright {
+    float: right;
+}
+.bcenter {
+    display: inline-block;
+    margin-top: 130px;
+    width: 100px;
+    text-align: center;
+}
+.bleft select, .bright select {
+    width: 220px;
+    height: 320px;
+}
+.modnet #modurl {
+    width: 100%;
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+.instance.technic {
+    background-color: #0d2b50;
+}
+.instance.technic.selected {
+    background-color: #1b4a84;
+}
